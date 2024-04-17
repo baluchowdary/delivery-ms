@@ -30,7 +30,7 @@ public class DeliveryController {
 
 	@KafkaListener(topics = NEW_STOCK_TOPIC, groupId = NEW_STOCK_GROUP)
 	public void deliverOrder(String event) throws JsonMappingException, JsonProcessingException {
-		System.out.println("Inside ship order for order "+event);
+		//System.out.println("Inside ship order for order "+event);
 		log.info("deliverOrder  -- Method start");
 		
 		Delivery shipment = new Delivery();
